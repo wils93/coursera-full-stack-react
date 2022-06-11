@@ -1,0 +1,10 @@
+services:
+  fullstack-assignment:
+    container_name: fullstack-assignment
+    image: node:lts-slim
+    ports:
+      - "3000:3000"
+    volumes:
+      - ${PRJ_PATH}:/home/root/project
+    working_dir: /home/root/project
+    command: tail -f /dev/null
