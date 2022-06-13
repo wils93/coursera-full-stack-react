@@ -1,6 +1,6 @@
 services:
-  fullstack-assignment:
-    container_name: fullstack-assignment
+  bootstrap:
+    container_name: bootstrap
     image: node:lts-slim
     ports:
       - "3000:3000"
