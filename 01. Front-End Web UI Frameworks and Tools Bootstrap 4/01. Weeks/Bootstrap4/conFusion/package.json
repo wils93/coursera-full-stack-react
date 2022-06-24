@@ -33,6 +33,9 @@
         "grunt-filerev": "^2.3.1",
         "grunt-sass": "^3.1.0",
         "grunt-usemin": "^3.1.1",
+        "gulp": "^4.0.2",
+        "gulp-sass": "^5.1.0",
+        "gulp-sync": "^0.1.4",
         "htmlmin": "^0.0.7",
         "jit-grunt": "^0.10.0",
         "lite-server": "^2.3.0",
@@ -50,6 +53,7 @@
         "copyfiles": "^2.4.1",
         "font-awesome": "^4.7.0",
         "grunt-cli": "^1.4.3",
+        "gulp-cli": "^2.3.0",
         "imagemin-cli": "^7.0.0",
         "jquery": "^3.3.1",
         "popper.js": "^1.12.9"
