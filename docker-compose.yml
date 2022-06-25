@@ -1,6 +1,6 @@
 services:
-  bootstrap:
-    container_name: bootstrap
+  mern-stack:
+    container_name: mern-stack
     image: node:lts-slim
     ports:
       - "3000:3000"
