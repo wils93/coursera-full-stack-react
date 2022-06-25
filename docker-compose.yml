@@ -6,5 +6,6 @@ services:
       - "3000:3000"
     volumes:
       - ${PRJ_PATH}:/home/root/project
+      - ./entrypoint.sh:/home/root/project/entrypoint.sh
     working_dir: /home/root/project
-    command: tail -f /dev/null
+    command: ./entrypoint.sh
