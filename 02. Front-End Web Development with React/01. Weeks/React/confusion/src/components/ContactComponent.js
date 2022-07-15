@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Breadcrumb, BreadcrumbItem, Button, Form, FormGroup, Label, Input, Col, Row, FormFeedback } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem, Button, Form, FormGroup, Label, Input, Col, FormFeedback } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 class Contact extends Component {
@@ -130,7 +130,7 @@ class Contact extends Component {
                                         onChange={this.handleInputChange}
                                         onBlur={this.handleBlur('firstname')}
                                         valid={errors.firstname === ''}
-                                        invalid={errors.firstname != ''} />
+                                        invalid={errors.firstname !== ''} />
                                     <FormFeedback>{errors.firstname}</FormFeedback>
                                 </Col>
                             </FormGroup>
@@ -142,7 +142,7 @@ class Contact extends Component {
                                         onChange={this.handleInputChange}
                                         onBlur={this.handleBlur('lastname')}
                                         valid={errors.lastname === ''}
-                                        invalid={errors.lastname != ''} />
+                                        invalid={errors.lastname !== ''} />
                                     <FormFeedback>{errors.lastname}</FormFeedback>
                                 </Col>
                             </FormGroup>
@@ -154,7 +154,7 @@ class Contact extends Component {
                                         onChange={this.handleInputChange}
                                         onBlur={this.handleBlur('telnum')}
                                         valid={errors.telnum === ''}
-                                        invalid={errors.telnum != ''} />
+                                        invalid={errors.telnum !== ''} />
                                     <FormFeedback>{errors.telnum}</FormFeedback>
                                 </Col>
                             </FormGroup>
@@ -166,7 +166,7 @@ class Contact extends Component {
                                         onChange={this.handleInputChange}
                                         onBlur={this.handleBlur('email')}
                                         valid={errors.email === ''}
-                                        invalid={errors.email != ''} />
+                                        invalid={errors.email !== ''} />
                                     <FormFeedback>{errors.email}</FormFeedback>
                                 </Col>
                             </FormGroup>
