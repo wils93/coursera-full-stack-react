@@ -32,3 +32,14 @@ address {
 .navbar-dark {
     background-color: #512DA8;
 }
+
+/* Fix for Modal not showing up */
+.fade {
+    opacity: 1
+}
+
+/* Fix for Modal shifting upwards */
+.center {
+    position: relative;
+    top: 10%;
+}
