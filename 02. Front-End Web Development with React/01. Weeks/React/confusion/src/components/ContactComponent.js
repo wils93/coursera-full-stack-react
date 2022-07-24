@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Breadcrumb, BreadcrumbItem, Button, Row, Col, Label } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { Control, Form, Errors, actions } from 'react-redux-form';
+import { Control, Form, Errors } from 'react-redux-form';
+import { baseUrl } from '../shared/baseUrl';
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
@@ -18,7 +19,33 @@ class Contact extends Component {
 
     handleSubmit(values) {
         console.log("Current State is: " + JSON.stringify(values));
-        alert("Current State is: " + JSON.stringify(values));
+        this.props.postFeedback(values.firstname,
+            values.lastname,
+            values.telnum,
+            values.email,
+            values.agree,
+            values.contactType,
+            values.message)
+
+        const feedback = fetch(baseUrl + 'feedback')
+            .then(response => {
+                if (response.ok) {
+                    return response;
+                }
+                else {
+                    var error = new Error('Error ' + response.status + ': ' + response.statusText)
+                    error.response = response;
+                    throw error;
+                }
+            },
+                error => {
+                    var errmess = new Error(error.message);
+                    throw errmess;
+                })
+            .then(response => response.json())
+            .then(feedback => alert("Current State is: " + JSON.stringify(feedback[feedback.length - 1])))
+            .catch(error => alert(error.message));
+
         this.props.resetFeedbackForm()
     }
 
