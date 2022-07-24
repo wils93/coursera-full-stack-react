@@ -8,7 +8,7 @@ if (-Not $course) {
 if ($course -eq 1) {
     $env:PRJ_PATH = ($pwd).path + "/01. Front-End Web UI Frameworks and Tools Bootstrap 4/01. Weeks/Bootstrap4/conFusion"
 } elseif ($course -eq 2) {
-    $env:PRJ_PATH = ($pwd).path + "/02. Front-End Web Development with React/01. Weeks/React/confusion"
+    $env:PRJ_PATH = ($pwd).path + "/02. Front-End Web Development with React/01. Weeks"
 }
 
 Write-Host Running in $env:PRJ_PATH

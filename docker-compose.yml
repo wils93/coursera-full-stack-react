@@ -4,6 +4,7 @@ services:
     image: node:lts-slim
     ports:
       - "3000:3000"
+      - "3001:3001"
     volumes:
       - ${PRJ_PATH}:/home/root/project
       - ./entrypoint.sh:/home/root/project/entrypoint.sh
